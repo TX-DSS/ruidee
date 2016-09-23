@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ruidee</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{static '/vendor/bootstrap/css/bootstrap.css'}}">
+        <link rel="stylesheet" href="{{static '/vendor/bootstrap/css/bootstrap-theme.css'}}">
+        <script src="{{static '/vendor/js/jquery-2.1.1.min.js'}}"></script>
+        <script src="{{static '/vendor/js/jquery-ui-1.11.1.min.js'}}"></script>
+        <script src="{{static '/vendor/bootstrap/js/bootstrap.min.js'}}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience.</p>
+        <![endif]-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Ruidee</a>
+                    {{#if EasyMoosim}}
+                    <a class="navbar-brand sub-title">
+                        <span class="glyphicon glyphicon-open"></span>
+                        <span class="">EasyMoosim挡板服务</span>
+                    </a>
+                    {{/if}}
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {{#if userInfo}}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userInfo.acctno}}-{{userInfo.name}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">设置</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/logout">注销</a></li>
+                            </ul>
+                        </li>
+                        {{^}}
+                        <li><a href="/login">登录</a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        {{{body}}}
+        <!-- <footer>
+            <p class="text-center">&copy; 2015 PickOneWay</p>
+        </footer>    -->
+    </body>
+</html>
