@@ -12,11 +12,13 @@ var userAccountSchema = new Schema({
     password: { type: String, required: true },
     // 用户类型
     type: String,
-    // 所属部门 
-    department: String,
+    // 微信id 
+    wechatId: String,
+    // 手机号
+    phoneNumber: String,
     // 用户状态
     status: String
 });
 
-var UserAccount = mongoose.model('UserAccount', userAccountSchema);
+var UserAccount = mongoose.model('user_account', userAccountSchema);
 module.exports = UserAccount;
