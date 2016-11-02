@@ -35,6 +35,7 @@
     "phantomjs": "^1.9.17",
     "q": "^1.4.1",
     "session-mongoose": "^0.4.1",
+    "vhost": "^2.0.0",
     "xml2js": "^0.4.15"
   },
   "devDependencies": {
