@@ -1,6 +1,6 @@
 # rwidee
 
-## 睿迪课堂 | Ruidee.Club
+## 睿迪课堂 | Rwidee.Club
 
 ### 1. 微信公众号
 
