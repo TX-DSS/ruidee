@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "wpdev": "node webpack_server.js",
     "wphot": "node webpack_server_hot.js",
-    "wpdist": "webpack --config webpack.config.dist.js --progress --colors --watch -p"
+    "wpdist": "webpack --config config/webpack.config.dist.js --progress --colors --watch -p"
   },
   "repository": {
     "type": "git",

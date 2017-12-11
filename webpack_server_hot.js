@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var express = require('express');
-var config = require('./webpack.config.hot');
+var config = require('./config/webpack.config.hot');
 var proxyMiddleware = require('http-proxy-middleware')
 
 var app = express();
